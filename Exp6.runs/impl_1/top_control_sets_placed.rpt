@@ -1,0 +1,150 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Dec 12 19:13:13 2023
+| Host         : DESKTOP-L4AEQ4H running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7k325t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    80 |
+| Unused register locations in slices containing registers |   148 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            3322 |          618 |
+| No           | No                    | Yes                    |             113 |           53 |
+| No           | Yes                   | No                     |              68 |           32 |
+| Yes          | No                    | No                     |            1540 |          895 |
+| Yes          | No                    | Yes                    |            1444 |          626 |
+| Yes          | Yes                   | No                     |              53 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------+--------------------------------------+----------------------------------+------------------+----------------+
+|    Clock Signal   |             Enable Signal            |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------+--------------------------------------+----------------------------------+------------------+----------------+
+|  CLK_GEN/CLK_OUT1 |                                      | vga/U12/strdata_reg[19]_3        |                3 |              4 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_LED/next_data_count      | rst_all                          |                2 |              4 |
+|  debug_clk        | core/ctrl/B_reg[6]_0[0]              | core/ctrl/B_reg[6]               |                1 |              4 |
+|  debug_clk        | core/ctrl/B_reg[6]_0[0]              | core/ctrl/B_reg[26]              |                1 |              4 |
+|  CLK_GEN/CLK_OUT3 | BTN_SCAN/p_0_in                      |                                  |                1 |              5 |
+| ~CLK_GEN/CLK_OUT1 | SW_IBUF[13]                          |                                  |                2 |              6 |
+| ~CLK_GEN/CLK_OUT1 | vga/__13/MEMBUF_reg_0_63_0_2_i_2_n_0 |                                  |                2 |              6 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_SEG/next_data_count      | rst_all                          |                3 |              6 |
+|  CLK_GEN/CLK_OUT1 | vga/U12/E[0]                         |                                  |                3 |              7 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_LED/buff[15]_i_1__0_n_0  | DISPLAY/P2S_LED/buff[16]_i_1_n_0 |                1 |              7 |
+|  debug_clk        |                                      | core/mu/state[6]_i_1_n_0         |                2 |              7 |
+|  CLK_GEN/CLK_OUT1 |                                      | vga/U12/strdata_reg[38]          |                6 |              9 |
+|  CLK_GEN/CLK_OUT3 |                                      | vga/U12/h_count[9]_i_1_n_0       |                7 |             10 |
+|  CLK_GEN/CLK_OUT3 | vga/U12/v_count                      |                                  |                7 |             10 |
+|  CLK_GEN/CLK_OUT3 |                                      | vga/U12/rdn_reg_n_0              |                4 |             12 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_LED/buff[15]_i_1__0_n_0  |                                  |                6 |             12 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_SEG/buff[64]_i_2_n_0     | DISPLAY/P2S_SEG/buff[64]_i_1_n_0 |                3 |             13 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_SEG/buff[64]_i_2_n_0     |                                  |                4 |             14 |
+|  CLK_GEN/CLK_OUT3 | DISPLAY/P2S_SEG/buff[64]_i_2_n_0     | DISPLAY/P2S_SEG/buff[63]_i_1_n_0 |                5 |             15 |
+|  CLK_GEN/CLK_OUT4 |                                      |                                  |                6 |             17 |
+|  debug_clk        | core/reg_IF_IS/FUS_reg[3][25][0]     | rst_all                          |                9 |             22 |
+|  debug_clk        | core/reg_IF_IS/FUS_reg[4][25]_0      | rst_all                          |                7 |             22 |
+|  debug_clk        | core/reg_IF_IS/IMM_reg[1][31]_0[0]   | rst_all                          |                9 |             26 |
+|  CLK_GEN/CLK_OUT3 |                                      |                                  |               12 |             26 |
+|  CLK_GEN/CLK_OUT3 |                                      | rst_all                          |               10 |             26 |
+|  debug_clk        | core/reg_IF_IS/IMM_reg[2][31]        | rst_all                          |               10 |             26 |
+|  debug_clk        | core/reg_IF_IS/FUS_reg[2][25][0]     | rst_all                          |               11 |             26 |
+|  debug_clk        | core/ctrl/IMM[5][31]_i_1_n_0         | rst_all                          |               12 |             26 |
+|  debug_clk        | core/ctrl/FUS[1][26]_i_1_n_0         | rst_all                          |               10 |             27 |
+|  debug_clk        | core/ctrl/FUS[5][26]_i_1_n_0         | rst_all                          |                8 |             27 |
+| ~debug_clk        | core/ctrl/register_reg[9][31][0]     | rst_all                          |               17 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[6][31][0]     | rst_all                          |               17 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[8][31][0]     | rst_all                          |               13 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[31][31]_0[0]  | rst_all                          |               18 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[4][31][0]     | rst_all                          |               15 |             32 |
+|  debug_clk        | core/alu/finish                      | rst_all                          |               23 |             32 |
+|  debug_clk        | core/ctrl/Q_reg[31][0]               | rst_all                          |                7 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[5][31][0]     | rst_all                          |               14 |             32 |
+|  debug_clk        | core/du/E[0]                         | rst_all                          |               12 |             32 |
+|  debug_clk        | core/ju/finish                       | rst_all                          |                9 |             32 |
+|  debug_clk        | core/ctrl/PCR[5][31]_i_1_n_0         |                                  |               17 |             32 |
+|  debug_clk        | core/reg_IF_IS/PCR_reg[1][31]_0[0]   |                                  |               18 |             32 |
+|  debug_clk        | core/mem/E[0]                        | rst_all                          |               11 |             32 |
+|  debug_clk        | core/mu/Q[0]                         | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[10][31][0]    | rst_all                          |               15 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[21][31][0]    | rst_all                          |               11 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[17][31][0]    | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[30][31][0]    | rst_all                          |               17 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[16][31][0]    | rst_all                          |               12 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[12][31][0]    | rst_all                          |               15 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[15][31][0]    | rst_all                          |               16 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[29][31][0]    | rst_all                          |               17 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[14][31][0]    | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[19][31][0]    | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[13][31][0]    | rst_all                          |               13 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[27][31][0]    | rst_all                          |               21 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[22][31][0]    | rst_all                          |               13 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[11][31][0]    | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[28][31][0]    | rst_all                          |               13 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[18][31][0]    | rst_all                          |               12 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[1][0][0]      | rst_all                          |               16 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[20][31][0]    | rst_all                          |               10 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[24][31][0]    | rst_all                          |               13 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[25][31][0]    | rst_all                          |               10 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[26][31][0]    | rst_all                          |               11 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[23][31][0]    | rst_all                          |               16 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[2][31][0]     | rst_all                          |               14 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[3][31][0]     | rst_all                          |               16 |             32 |
+| ~debug_clk        | core/ctrl/register_reg[7][31][0]     | rst_all                          |               19 |             32 |
+|  CLK_GEN/CLK_OUT1 |                                      |                                  |               24 |             36 |
+|  CLK_GEN/CLK_OUT1 | vga/U12/should_latch_debug_data      |                                  |                6 |             48 |
+|  debug_clk        | core/ctrl/E[0]                       | rst_all                          |               24 |             58 |
+|  debug_clk        | core/ctrl/B_reg[6]_0[0]              |                                  |               31 |             60 |
+|  debug_clk        | core/ctrl/A_reg_reg[0]_0[0]          |                                  |               13 |             64 |
+|  debug_clk        | core/mu/state[6]_i_1_n_0             |                                  |               30 |             64 |
+|  debug_clk        | core/mem/i_/i__n_0                   |                                  |               44 |             97 |
+|  debug_clk        |                                      | rst_all                          |               53 |            113 |
+|  debug_clk        | core/ctrl/cmp_ctrl_reg_reg[0][0]     |                                  |               36 |            127 |
+| ~debug_clk        | core/mem/ram/data[127][7]_i_1_n_0    |                                  |              688 |           1024 |
+|  debug_clk        |                                      |                                  |              579 |           3249 |
++-------------------+--------------------------------------+----------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 4      |                     4 |
+| 5      |                     1 |
+| 6      |                     3 |
+| 7      |                     3 |
+| 9      |                     1 |
+| 10     |                     2 |
+| 12     |                     2 |
+| 13     |                     1 |
+| 14     |                     1 |
+| 15     |                     1 |
+| 16+    |                    61 |
++--------+-----------------------+
+
+
